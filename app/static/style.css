@@ -1,0 +1,143 @@
+body {
+    font-family: 'Cairo', sans-serif;
+
+}
+
+.mainform {
+    background-image: url("fbg.jpg")
+}
+
+
+
+/* THEME BOOTSTRAP */
+
+.nav_bg {
+    background-color: #0a264d !important;
+}
+
+
+
+
+
+body,
+html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('home4.jpg');
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.centered {
+    height: 140px;
+
+    /*background-color: #0a264d;*/
+    margin-top: 20px;
+}
+
+
+
+/*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
+
+.btn-primary {
+    color: #fff;
+    background-color: #0495c9;
+    border-color: #357ebd;
+    /*set the color you want here*/
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #00b3db;
+    border-color: #285e8e;
+    /*set the color you want here*/
+}
+
+
+.cover_title {
+
+    font-size: 65;
+    font-weight: bold;
+
+
+}
+
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .centered {
+
+        width: 250px;
+        height: 100px;
+        margin-top: 20px;
+    }
+
+    .cover_title {
+        font-size: 35;
+        font-weight: bold;
+
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    .mobile_nav_container {
+        direction: ltr;
+    }
+    .navbar-collapse {
+        margin-right: 0px !important;
+    }
+
+    .nav_table {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        /* For cells of equal size */
+    }
+    .celled_right {
+        display: table-cell;
+        text-align: right;
+    }
+    .celled {
+        display: table-cell;
+
+        text-align: center;
+    }
+
+    .navbar-brand {
+        width: 100px;
+    }
+}
+
+
+.faq-head:hover {
+    cursor: pointer;
+}

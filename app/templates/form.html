@@ -15,16 +15,6 @@
 
     <body class="bodyFormat " id="myForm">
             <h1>hello, {{userr}}</h1>
-            <br>
-            {% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
         <div class="container">
 
 
@@ -35,8 +25,7 @@
                 
                 <div style=" max-width: 750px" class="  col p-4  mt-2   border bg-light " id="formDiv">
 
-                    <form class="registration-form" dir="rtl" action="/" method="POST">
-                        {{ form.csrf_token }}
+                    <form class="registration-form" dir="rtl">
 
                         <!-- First Field Set in the form -->
                             
@@ -59,7 +48,7 @@
 
                                 </div>
                                 <div class="form-group col-sm-4">
-                                    {{form.family(class="form-control form-control-sm", placeholder="إسم العائلة")}}
+                                    {{form.father_name(class="form-control form-control-sm", placeholder="إسم العائلة")}}
 
                                 </div>
                             </div>

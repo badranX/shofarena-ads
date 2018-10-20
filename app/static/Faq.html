@@ -1,0 +1,166 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body dir="rtl">
+
+
+
+    <!-- Navigation -->
+    <!-- There's also sticky-top instead of fixed-top which is not supported by all browsers -->
+    <nav class="navbar  fixed-top navbar-expand-lg navbar-light nav_bg navbar-dark ">
+        <div class="container mobile_nav_container">
+            <!-- TODO check height = auto works for HTML -->
+
+            <div class="nav_table">
+                <div class="celled">
+
+                </div>
+                <a href="/index.html" class="celled">
+                    <img class="  navbar-brand " src="svg/logo.png" height="auto" width="130" alt="logo">
+
+                </a>
+
+                <div class="celled_right">
+                    <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                </button>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- <a class="navbar-brand " href="#">شفيرنا</a> -->
+
+
+
+            <div class="collapse navbar-collapse mr-5" id="navbarResponsive">
+                <ul class="navbar-nav  ">
+                    <li class="nav-item  mx-2  ">
+                        <a class="nav-link  text-right" href="/index.html"> الرئيسية</a>
+
+                    </li>
+                    <li class="nav-item mx-2  ">
+                        <a class="nav-link text-right" href="#"> عن شفيرنا</a>
+                    </li>
+                    <li class="nav-item mx-2 active">
+                        <a class="nav-link text-right " href="/faq.html">أسئلة شائعة</a>
+                    </li>
+
+                    <li class="nav-item mx-2 ">
+                        <a class="nav-link text-right" href="#">عملاؤنا</a>
+                    </li>
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-right" href="#">اتصل بنا</a>
+                    </li>
+                    <li class="nav-item mx-2 mr-md-5">
+                        <form class="form-inline float-right  " action="/index.html">
+                            <button class="btn btn-outline-success float-right " tybe="submit"> سجل سيارتك </button>
+                        </form>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--End Nav-->
+
+
+
+
+
+
+    <div class="container " style="position:relative; top: 100px;">
+        <div id="accordion" class="text-right">
+            <div class="card">
+                <div class="card-header p-0" id="headingOne">
+                    <div class="p-2" style="cursor:pointer; display: flex ; justify-content: space-between;  align-items: center;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h5 class="mb-0">
+                            رقم واحد
+
+                        </h5>
+                        <h5 class="mb-0">
+                            <i class="fa fa-plus "></i>
+                        </h5>
+                    </div>
+
+
+
+                </div>
+
+                <div id="collapseOne" class="collapse " aria-labelledby="headingOne">
+                    <div class="card-body">
+                        بعض الكلام وقليله في ر قم واحد
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--card end-->
+
+            <div class="card">
+                <div class="card-header p-0" id="heading2">
+                    <div class="p-2" style="cursor:pointer; display: flex ; justify-content: space-between;  align-items: center;" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                        <h5 class="mb-0">
+                            رقم واحد
+
+                        </h5>
+                        <h5 class="mb-0">
+                            <i class="fa fa-plus "></i>
+                        </h5>
+                    </div>
+
+
+
+                </div>
+
+                <div id="collapse2" class="collapse " aria-labelledby="heading2">
+                    <div class="card-body">
+                        بعض الكلام وقليله في ر قم واحد
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <!--Scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js " integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js " integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm " crossorigin="anonymous "></script>
+
+    <script>
+        $('.collapse').on('show.bs.collapse', function() {
+            $(this).parent().find(".fa-plus ").removeClass("fa-plus ").addClass("fa-minus ");
+        }).on('hide.bs.collapse', function() {
+            $(this).parent().find(".fa-minus ").removeClass("fa-minus ").addClass("fa-plus ");
+        });
+    </script>
+</body>
+</html>
