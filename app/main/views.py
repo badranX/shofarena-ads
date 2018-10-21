@@ -8,16 +8,20 @@ from .forms import SignUp
 
 @main_blueprint.route('/', methods=['GET','POST'])
 def index():
+    flash("hilo")
     
     form = SignUp()
     
-    
-    usr = mongo.db.driver.find_one_or_404()
+    if request.method == 'POST':
+        print(request.form.to_dict())
+    usr = mongo.db.driver.find_one_or_404({})
 
     if form.validate_on_submit():
+        print("validated YAHYA")
         mongo.db.driver.insert_one(request.form.to_dict())
         return redirect(url_for('static', filename='registerdone.html'))
 
+    flash_errors(form)
     return render_template('form.html',form=form,userr=usr)
 
 
