@@ -1,1 +1,1 @@
-web: gunicorn flask-car-ads:app
+web: gunicorn carads:app
