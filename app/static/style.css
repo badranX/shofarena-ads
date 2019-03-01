@@ -1,10 +1,22 @@
+/* main color #0a264d */
+
 body {
     font-family: 'Cairo', sans-serif;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
 
+
+    /* Height of the footer */
+}
+
+html {
+    height: 100%;
 }
 
 .mainform {
-    background-image: url("fbg.jpg")
+
+    background-image: url("fbg.jpg");
 }
 
 
@@ -12,6 +24,7 @@ body {
 /* THEME BOOTSTRAP */
 
 .nav_bg {
+
     background-color: #0a264d !important;
 }
 
@@ -19,10 +32,6 @@ body {
 
 
 
-body,
-html {
-    height: 100%;
-}
 
 .bg {
     /* The image used */
@@ -39,7 +48,7 @@ html {
 }
 
 
-.centered {
+.main_btn {
     height: 140px;
 
     /*background-color: #0a264d;*/
@@ -52,8 +61,8 @@ html {
 
 .btn-primary {
     color: #fff;
-    background-color: #0495c9;
-    border-color: #357ebd;
+    background-color: #0a264d;
+    border-color: #171a1d;
     /*set the color you want here*/
 }
 
@@ -63,8 +72,8 @@ html {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
     color: #fff;
-    background-color: #00b3db;
-    border-color: #285e8e;
+    background-color: #0f3b79;
+    border-color: #0a264d;
     /*set the color you want here*/
 }
 
@@ -93,7 +102,7 @@ hr {
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-    .centered {
+    .main_btn {
 
         width: 250px;
         height: 100px;
@@ -135,9 +144,30 @@ hr {
     .navbar-brand {
         width: 100px;
     }
+
 }
 
 
 .faq-head:hover {
     cursor: pointer;
+}
+
+
+#body2 {
+    position: relative;
+
+    min-height: 100%;
+    padding-bottom: 80px;
+
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    max-height: 80px;
+
+    bottom: 0;
+
+    background-color: #e9e4e3;
+    overflow: hidden;
 }

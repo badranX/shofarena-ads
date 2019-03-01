@@ -6,8 +6,8 @@ from .forms import SignUp
 
 
 
-@main_blueprint.route('/', methods=['GET','POST'])
-def index():
+@main_blueprint.route('/sign', methods=['GET','POST'])
+def signup():
     flash("hilo")
     
     form = SignUp()
@@ -34,3 +34,6 @@ def flash_errors(form):
                 getattr(form, field).label.text,
                 error
             ))
+
+
+

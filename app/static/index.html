@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
 
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
     <title>Hello, world!</title>
 </head>
 
@@ -74,8 +77,8 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link text-right" href="#">اتصل بنا</a>
                     </li>
-                    <li class="nav-item mx-2 mr-md-5">
-                        <form class="form-inline float-right  " action="/index.html">
+                    <li class="nav-item mx-2 ">
+                        <form class="form-inline float-right  " action="/sign">
                             <button class="btn btn-outline-success float-right " tybe="submit"> سجل سيارتك </button>
                         </form>
                     </li>
@@ -117,11 +120,13 @@
 
                         <h1 class="cover_title ">كن جزئا من شفيرنا</h1>
 
-                        <button type="button" class="btn  btn-primary btn-lg   centered " style="width:50%; ">
-                
+                        <form action="/sign">
+                            <button type="submit" class="btn  btn-primary btn-lg   main_btn " style="width:50%; ">
                
-                        <span>... ابدأ بالتسجيل </span>
+                        <span> ابدأ بالتسجيل </span>
+                        <span>...</span>
                     </button>
+                        </form>
 
 
                     </td>
@@ -163,7 +168,7 @@
 
             </div>
 
-            <div class=" col-sm-6  ">
+            <div class=" col-12 col-md-6  ">
                 <div>
                     <h1 class=" text-right  ">ما هي شفيرنا؟</h1>
                     <p class="text-justify " dir="rtl">
@@ -182,7 +187,6 @@
 
 
     <!--STEPS -->
-
     <div class="container mt-5 mb-5 pt-3">
         <div class="row">
             <div class="col text-center">
@@ -195,32 +199,26 @@
 
         <div class="row" dir="rtl">
             <div class="col-12 col-sm-3  text-center">
-                <i class="material-icons " style="font-size: 70px">
-                    attach_money
-                    </i>
-                <h3>1 أزالة الدعاية</h3>
-                <p>قود سيارتك واحصل على أموالك</p>
+                <i class="fas fa-clipboard-list fa-5x"></i>
+
+                <h3>سجل معنا</h3>
+                <p>أدخل بيانتك هنا</p>
             </div>
             <div class="col-12   col-sm-3 text-center">
-                <i class="material-icons " style="font-size: 70px">
-                    attach_money
-                    </i>
-                <h3>2 أزالة الدعاية</h3>
-                <p>قود سيارتك واحصل على أموالك</p>
+                <i class="fas fa-clipboard-check fa-5x"></i>
+                <h3>نوافق بيانتك</h3>
+                <p> نقوم بموافقت بيانتك مع الشركة المناسبة</p>
             </div>
             <div class="col-12 col-sm-3 text-center">
-                <i class="material-icons " style="font-size: 70px">
-                    assignment_turned_in
-                    </i>
-                <h3>3 أزالة الدعاية</h3>
-                <p>ثم نقوم بموافقت بيانتك مع الشركة المناسبة</p>
+                <i class="fas fa-hand-holding-usd fa-5x"></i>
+
+                <h3>كسب الأموال</h3>
+                <p>صرف الأموال المستحقة</p>
             </div>
-            <div class="col-12 col-sm-3 text-center">
-                <i class="material-icons " style="font-size: 70px">
-        assignment
-    </i>
-                <h3>4 أزالة الدعاية </h3>
-                <p> سجل بعض المعلومات عن نفسك</p>
+            <div class="col-12 col-sm-3 text-center ">
+                <i class="fas fa-sticky-note fa-5x"></i>
+                <h3>إزالة الدعاية </h3>
+                <p>إزالة الدعاية بدون أي أثر على سيارتك</p>
             </div>
         </div>
 
@@ -234,36 +232,25 @@
             <div class="col text-center ">
 
                 <img class="navbar-brand mt-3" src="svg/logo.png" height="auto" width="165" alt="logo">
+
+
                 <br>
 
 
 
 
+                <div class="pt-2 pb-2">
+                    <i style="color: white;" class="fab fa-facebook-f fa-2x mx-2"></i>
 
+                    <i style="color: white;" class="fab fa-twitter fa-2x mx-2"></i>
 
+                    <i style="color: white;" class="fab fa-linkedin-in fa-2x mx-2"></i>
 
-                <svg width="50" height="50">       
-             <image xlink:href="svg/f.svg" src="yourfallback.png" width="30" height="30"/>    
-            </svg>
+                    <i style="color: white;" class="fab fa-instagram fa-2x mx-2"></i>
 
-                <svg width="50" height="50">       
-             <image xlink:href="svg/t.svg" src="yourfallback.png" width="35" height="35"/>    
-            </svg>
-                <!-- this svg has different sizes than all others -->
-                <svg width="55" height="57">       
-             <image xlink:href="svg/in.svg" src="yourfallback.png" width="43" height="43"/>    
-            </svg>
+                    <i style="color: white;" class="fab fa-youtube fa-2x mx-2"></i>
 
-                <svg width="46" height="50">       
-             <image xlink:href="svg/instagram.svg" src="yourfallback.png" width="32" height="32"/>    
-            </svg>
-
-                <svg width="50" height="60">       
-             <image xlink:href="svg/y.svg" src="yourfallback.png" width="52" height="52"/>    
-            </svg>
-
-
-
+                </div>
 
 
             </div>
