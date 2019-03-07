@@ -1,36 +1,4 @@
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-
-
-
-    <title>موقع شوفيرنا</title>
-</head>
-
-    <body class="bodyFormat " id="myForm">
-            <h1>hello, {{userr}}</h1>
-
-            {% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
         <div class="container">
 
 
@@ -40,7 +8,19 @@
 <!-- col-xs-12 col-sm-6 col-md-6 col-lg-6 -->
                 
                 <div style=" max-width: 750px" class="  col p-4  mt-2   border bg-light " id="formDiv">
+                    
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
 
+                                <div class="alert alert-secondary" role="alert">
+                                {{ message }}
+                                </div>
+                    
+                            {% endfor %}
+                
+                        {% endif %}
+                    {% endwith %}
                     <form class="registration-form" dir="rtl" action="/" method="POST">
                         {{ form.csrf_token }}
 
@@ -48,7 +28,7 @@
                             
                             <div class="row ">
                                 <div class="col required" >
-                                    <label for="FullNameInput" class= "float-right small  " id="nameLabel"> <strong> الأسم </strong></label>
+                                    <label for="FullNameInput" class= "float-right small  " id="nameLabel"> <strong> الإسم </strong></label>
                                 </div>
                             </div>
 
@@ -119,12 +99,12 @@
                             <div class="row">
                                 <div class="form-group col-sm-6 col-md">
                                     
-                                    {{form.home_city(class="form-control form-control-sm", id="city")}}
+                                    {{form.home_city(class="form-control form-control-sm h-auto", id="city")}}
                                 </div>
 
                                 <div class="form-group col-sm-6 col-md">
                                     
-                                    {{form.home_town(class="form-control form-control-sm", id="town")}}
+                                    {{form.home_town(class="form-control form-control-sm h-auto", id="town")}}
                                 </div>   
                             </div> 
 
@@ -145,11 +125,11 @@
                              <div class="row">
                                 <div class="form-group col-sm-6 col-md">
                                     
-                                    {{form.work_city(class="form-control form-control-sm", id="cityWork")}}
+                                    {{form.work_city(class="form-control form-control-sm h-auto", id="cityWork")}}
                                 </div>
 
                                 <div class="form-group col-sm-6 col-md">
-                                    {{form.work_town(class="form-control form-control-sm", id="townWork")}}
+                                    {{form.work_town(class="form-control form-control-sm h-auto", id="townWork")}}
                                 </div>   
                             </div>
 
@@ -163,12 +143,12 @@
                                 <div class="form-group col-sm-6 col-md">
                                     <label for="carStatus" class="small float-right"><strong>السيارة</strong></label>
                                     
-                                    {{form.car_type( class="form-control form-control-sm")}}
+                                    {{form.car_type( class="form-control form-control-sm h-auto")}}
                                 </div>
                                 <div class="form-group col-sm-6 col-md">
                                     <label for="carYear" class="small float-right"><strong>سنة التصنيع</strong></label>
                                    
-                                    {{form.car_year(class="form-control form-control-sm")}}
+                                    {{form.car_year(class="form-control form-control-sm h-auto")}}
                                 </div>
                             </div>
 
@@ -180,13 +160,13 @@
                                 <div class="form-group col-sm-6 col-md">
                                     <label for="carType" class="float-right small"><strong>الشركة المصنعة</strong></label>
                                     
-                                    {{form.car_company(class="form-control form-control-sm ", id="carType")}}
+                                    {{form.car_company(class="form-control form-control-sm h-auto", id="carType")}}
                                 </div>
 
                                 <div class="form-group col-sm-6 col-md">
                                     <label for="carModel" class="float-right small"><strong>الموديل</strong></label>
                                    
-                                    {{form.car_model(class="form-control form-control-sm", id="carModel")}}
+                                    {{form.car_model(class="form-control form-control-sm h-auto", id="carModel")}}
                                 </div>
 
                             </div>
@@ -197,12 +177,12 @@
                                 <div class="form-group col-sm-6 col-md">
                                     <label for="carColor" class="float-right small"><strong>لون السيارة</strong></label>
                                     
-                                    {{form.car_color(class="form-control form-control-sm")}}
+                                    {{form.car_color(class="form-control form-control-sm h-auto")}}
                                 </div>
                                 <div class="form-group col-sm-6 col-md">
                                     <label for="carCondition" class="float-right small"><strong>حالة السيارة</strong></label>
                                    
-                                    {{form.car_condition(class="form-control form-control-sm")}}
+                                    {{form.car_condition(class="form-control form-control-sm h-auto")}}
                                 </div>
 
 
@@ -231,10 +211,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         
        <!-- <script type="text/javascript" src="MultiStepForm.js"></script> -->
-        <script type="text/javascript" src="carModelDynamic.js"></script>
-        <script type="text/javascript" src="DynamicAddress.js"></script>
+        <script type="text/javascript" src="/carModelDynamic.js"></script>
+        <script type="text/javascript" src="/DynamicAddress.js"></script>
 
-    </body>
-
-
-</html>
