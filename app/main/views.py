@@ -17,17 +17,14 @@ def signup():
 
     if form.validate_on_submit():
         mongo.db.driver.insert_one(request.form.to_dict())
-        return redirect(url_for('static', filename='registerdone.html'))
+        
+        return redirect(url_for('static', filename='registerdone.html',username=request.form[form.first_name.name]))
 
     flash_errors(form)
     return render_template('base.html',form=form)
 
 
 def flash_errors(form):
-    
     for field, errors in form.errors.items():
         for error in errors:
-            flash(u"Error in the %s field - %s" % (getattr(form, field).label.text), error)
-
-
-
+            flash(u"{0} : {1}".format( getattr(form, field).label.text, error))

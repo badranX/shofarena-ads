@@ -31,10 +31,9 @@ class SignUp(FlaskForm):
     #Email
     email=StringField('Email',
         render_kw= {
-            "type":"email"},
-        validators=[DataRequired(),
-        Email(message=u'That\'s not a valid email address.')])
-
+            "type":"email"}
+        )
+#validators=[Email(message=u'That\'s not a valid email address.')]
     #home_adress
     home_city = SelectField(u'المدينة', 
         choices=[('', 'المحافظة'),
@@ -49,12 +48,10 @@ class SignUp(FlaskForm):
             ('قطاع غزة', 'قطاع غزة')
          ],
         validators = [DataRequired()])
-    home_town = SelectField(u'البلدة', 
-        choices=[('','البلدة')],
-        validators = [DataRequired()])
+    #home_town = SelectField(u'بلدة السكن') #TODO check on the browser
 
     #work_adress
-    work_city = SelectField(u'البلدة', 
+    work_city = SelectField(u'مدينة العمل', 
         choices=[('', 'المحافظة'),
             ('اريحا', 'اريحا'), 
             ('الخليل', 'الخليل'),
@@ -67,9 +64,7 @@ class SignUp(FlaskForm):
             ('قطاع غزة', 'قطاع غزة')
          ],
         validators = [DataRequired()])
-    work_town = SelectField(u'البلدة',
-        choices=[('','البلدة')],
-        validators = [DataRequired()])
+    #work_town = SelectField(u'بلدة العمل')#check on the browser
     #car_taxi_private
     car_type = SelectField(u'نوع السيارة', 
         choices=[
@@ -143,9 +138,7 @@ class SignUp(FlaskForm):
         validators = [DataRequired()])
 
     
-    car_model = SelectField(u'موديل السيارة',
-        choices=[('','الموديل')],
-        validators = [DataRequired()])
+    #car_model = SelectField(u'موديل السيارة')
     #car_color
     car_color = SelectField(u'لون السيارة', 
         choices=[('','اللون'),
