@@ -308,22 +308,44 @@ var alltowns= [
     
 ]
 
-var towns = $("#town");
-var cities = $("#city");
-var townsWork= $("#townWork");
-var citiesWork = $("#cityWork");
 
 
-towns.prop('disabled', true);
-townsWork.prop('disabled', true);
+$("#town").prop('disabled', true);
+$("#townWork").prop('disabled', true);
+
+$("#city").change(function(){
+	var city = $(this).val();
+	var options =  '<option value=""><strong>القرية</strong></option>';
+    var count = 0;  // for disabling the select or not    
+   
+	
+	$(alltowns).each(function(index, value){
+       
+		if(value.city == city){
+            
+			options += '<option value="'+value.city+'">'+value.town+'</option>';
+            count+=1;
+		}
+            
+	});
+
+    if(count > 1){
+         $("#town").prop('disabled', false);
+    }else {$("#town").prop('disabled', true); }
+    
+	$('#town').html(options);
+    
+   
+    
+});
 
 
-function populate(toPopulate,fromm) {
-    var city = fromm.val();
-    var options ='<option value=""><strong>القرية</strong></option>';
+$("#cityWork").change(function(){
+	var city = $(this).val();
+	var options =  '<option value=""><strong>القرية</strong></option>';
     var count = 0;
-
-    $(alltowns).each(function(index, value){
+    
+	$(alltowns).each(function(index, value){
        
 		if(value.city == city){
 			options += '<option value="'+value.city+'">'+value.town+'</option>';
@@ -332,17 +354,10 @@ function populate(toPopulate,fromm) {
 	});
     
      if(count > 1){
-        toPopulate.prop('disabled', false);
-    }else {toPopulate.prop('disabled', true); }
+         $("#townWork").prop('disabled', false);
+    }else {$("#townWork").prop('disabled', true); }
     
-	toPopulate.html(options);
-
-}
-
-
-
-cities.change(populate(towns,cities));
-
-
-
-citiesWork.change( populate(townsWork,citiesWork)  );
+    
+	
+	$('#townWork').html(options);
+});
