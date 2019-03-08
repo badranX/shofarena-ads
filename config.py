@@ -11,6 +11,7 @@ class DevelopmentConfig(Config):
     MONGO_URI = "mongodb+srv://python:python@cluster0-93bqo.mongodb.net/deldb?retryWrites=true"
 
 class ProductionConfig(Config):
+    MONGO_URI = os.environ.get('MONGO_URI')
     pass
 
 config = {
