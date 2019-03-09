@@ -315,7 +315,7 @@ $("#townWork").prop('disabled', true);
 
 $("#city").change(function(){
 	var city = $(this).val();
-	var options =  '<option value=""><strong>القرية</strong></option>';
+	var options =  '<option disabled  value=""><strong>البلدة</strong></option>';
     var count = 0;  // for disabling the select or not    
    
 	
@@ -342,7 +342,7 @@ $("#city").change(function(){
 
 $("#cityWork").change(function(){
 	var city = $(this).val();
-	var options =  '<option value=""><strong>القرية</strong></option>';
+	var options =  '<option disabled  value=""><strong>البلدة</strong></option>';
     var count = 0;
     
 	$(alltowns).each(function(index, value){
