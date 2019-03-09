@@ -290,12 +290,13 @@ $("#carModel").prop('disabled', true);
 
 $("#carType").change(function(){
 	var car = $(this).val();
-	var options =  '<option disabled  value=""><strong>الموديل</strong></option>';
+    var options =  '<option disabled  value=""><strong>الموديل</strong></option>';
+    var count = 0;
 	$(allCars).each(function(index, value){
        
 		if(value.cartype == car){
 			options += '<option value="'+value.carModel+'">'+value.carModel+'</option>';
-            
+            count +=1;
 		}
 	});
     
