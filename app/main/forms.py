@@ -5,6 +5,13 @@ from wtforms.fields.html5 import TelField
 from wtforms.validators import DataRequired,InputRequired,Email,Length, Regexp
 
 
+class NonValidatingSelectField(SelectField):
+    """
+    Attempt to make an open ended select multiple field that can accept dynamic
+    choices added by the browser.
+    """
+    def pre_validate(self, form):
+        pass
 
 class SignUp(FlaskForm):
     
@@ -15,18 +22,18 @@ class SignUp(FlaskForm):
     
     #ID Number
     id=StringField('id',
-        render_kw={"pattern": "^\d{9}$",
+        render_kw={"pattern": "^(\d{9}|[٠١٢٣٤٥٦٧٨٩]{9})$",
         "type":"tel"},
         validators=[InputRequired(),
         
-        Regexp("^\d{9}$",message='ID is wrong')])
+        Regexp("^\d{9}$",message='رقم الهوية خاطئ')])
 
     #Mobile Number  
     mobile=StringField('Mobile',
         render_kw= {
-            "pattern":"^\+?\d{10,14}$",
+            "pattern":"^\+?(\d{10,14}|[٠١٢٣٤٥٦٧٨٩]{10,14})$",
             "type":"tel"},
-        validators=[InputRequired(), Regexp("^\+?\d{10,14}$",message='number is wrong')])
+        validators=[InputRequired(), Regexp("^\+?(\d{10,14}|[٠١٢٣٤٥٦٧٨٩]{10,14})$",message='رقم الهاتف المدخل خاطئ')])
 
     #Email
     email=StringField('Email',
@@ -44,11 +51,14 @@ class SignUp(FlaskForm):
             ('جنين', 'جنين'),
             ('رام الله والبيرة ', 'رام الله والبيرة'),
             ('قلقيلية', 'قلقيلية'),
+            ('سلفيت','سلفيت'),
+            ('طوباس','طوباس'),
+            ('طولكرم','طولكرم'),
             ('نابلس', 'نابلس'),
             ('قطاع غزة', 'قطاع غزة')
-         ],
-        validators = [DataRequired()])
-    #home_town = SelectField(u'بلدة السكن') #TODO check on the browser
+         ], validators = [DataRequired()])
+
+    home_town = NonValidatingSelectField(u'بلدة السكن', choices=[('', 'البلدة')], validators = [DataRequired()]) 
 
     #work_adress
     work_city = SelectField(u'مدينة العمل', 
@@ -60,11 +70,14 @@ class SignUp(FlaskForm):
             ('جنين', 'جنين'),
             ('رام الله والبيرة ', 'رام الله والبيرة'),
             ('قلقيلية', 'قلقيلية'),
+            ('سلفيت','سلفيت'),
+            ('طوباس','طوباس'),
+            ('طولكرم','طولكرم'),
             ('نابلس', 'نابلس'),
             ('قطاع غزة', 'قطاع غزة')
          ],
         validators = [DataRequired()])
-    #work_town = SelectField(u'بلدة العمل')#check on the browser
+    work_town = NonValidatingSelectField(u'بلدة العمل' , choices=[('', 'البلدة')], validators = [DataRequired()])#check on the browser
     #car_taxi_private
     car_type = SelectField(u'نوع السيارة', 
         choices=[
@@ -127,7 +140,7 @@ class SignUp(FlaskForm):
             ('فولكسفاجن', 'فولكسفاجن'),
             ('كاديلاك', 'كاديلاك'),
             ('كرايسلر', 'كرايسلر'),
-            ('kia', 'كيا Kia'),
+            ('كيا kia', 'كيا Kia'),
             ('لاندروفر', 'لاندروفر'),
             ('مازدا', 'مازدا'),
             ('مرسيدس', 'مرسيدس'),
@@ -138,7 +151,7 @@ class SignUp(FlaskForm):
         validators = [DataRequired()])
 
     
-    #car_model = SelectField(u'موديل السيارة')
+    car_model = NonValidatingSelectField(u'موديل السيارة', choices=[('', 'الموديل')], validators = [DataRequired()])
     #car_color
     car_color = SelectField(u'لون السيارة', 
         choices=[('','اللون'),

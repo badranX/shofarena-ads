@@ -323,7 +323,7 @@ $("#city").change(function(){
        
 		if(value.city == city){
             
-			options += '<option value="'+value.city+'">'+value.town+'</option>';
+			options += '<option value="'+value.town+'">'+value.town+'</option>';
             count+=1;
 		}
             
@@ -348,7 +348,7 @@ $("#cityWork").change(function(){
 	$(alltowns).each(function(index, value){
        
 		if(value.city == city){
-			options += '<option value="'+value.city+'">'+value.town+'</option>';
+			options += '<option value="'+value.town+'">'+value.town+'</option>';
             count+=1;
 		}
 	});

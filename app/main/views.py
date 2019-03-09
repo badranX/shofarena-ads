@@ -16,6 +16,7 @@ def signup():
     #usr = mongo.db.driver.find_one_or_404({})
 
     if form.validate_on_submit():
+        #TODO check if insert_one should hanlde its errors
         mongo.db.driver.insert_one(request.form.to_dict())
         
         return redirect(url_for('static', filename='registerdone.html',username=request.form[form.first_name.name]))
