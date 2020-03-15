@@ -1,3 +1,3 @@
 # car_ads_final
 
-Flask, MongoDB based project
+Python Flask and MongoDB based project
